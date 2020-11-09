@@ -1,12 +1,3 @@
-#' UCS Satellites
-#'
-#' This package contains information, collected by the Union of Concerned
-#' Scientists (UCS) on the satellites in Earth's orbit as of March 31, 2020.
-#' @docType package
-#' @name satellites
-#' @aliases satellites satellites-package
-NULL
-
 #' "satellites"
 #'
 #' A data set containing information on the 2670 satellites orbiting

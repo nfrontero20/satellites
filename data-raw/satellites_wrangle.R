@@ -1,5 +1,3 @@
-## code to prepare `DATASET` dataset goes here
-
 library(mosaic)
 library(tidyverse)
 library(knitr)

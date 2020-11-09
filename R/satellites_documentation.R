@@ -1,10 +1,10 @@
 #' "satellites"
 #'
 #' A data set containing information on the 2670 satellites orbiting
-#' Earth as of March 31, 2020.  The data in this package were obtained
-#' from the Union of Concerned Scientists (UCS).
+#' Earth as of March 31, 2020.  The data in this package was obtained
+#' from the Union of Concerned Scientists (UCS) Satellite Database
+#' 4/1/2020 release.
 #'
-#' @source \url{https://www.ucsusa.org/resources/satellite-database}
 #' @format A dataframe with 2670 elements
 #' \describe{
 #'   \item{official_name}{Official name}

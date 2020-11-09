@@ -21,27 +21,21 @@ knitr::opts_chunk$set(
 ![R-CMD-check](https://github.com/nfrontero20/satellites/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
-The `satellites` package was created to provide a simple yet information-filled research tool for those interested in learning about the satellites in Earth's orbit. The [Union for Concerned Scientists (UCS)](https://www.ucsusa.org/) first published this data set in 2005 and has updated it multiple times since then.  This package features the data from the April 1, 2020 release (which includes launches through March 31, 2020).  The UCS states on a [webpage dedicated to this database](https://www.ucsusa.org/resources/satellite-database) that their intent in producing the database is to "create a research tool for specialists and non-specialists alike by collecting open-source information on operational satellites and presenting it in a format that can be easily manipulated for research and analysis."  It is my belief that the UCS has succeeded in their mission, and through this package I aim to make the data even easier to work with. 
+The `satellites` package was created to provide a simple yet information-filled research tool for those interested in learning about the satellites in Earth's orbit.  Learning about astronomy and physics can be difficult in their own right, and identifying data and then cleaning that data add another layer of difficulty to that endeavor.  I hope that individuals interested in diving into topics such as astronomy, physics, math, and/or statistics who might be daunted by the idea of getting started with their exploration may find this package to be useful.  
 
-The UCS "Satellite Database" contains two data files that together contain 27 variables.  There are also additional columns where references for sources used for orbital data and other sources are stored.  I decided that I was interested in creating a data set that contained a subset of the original variables from the UCS database so that I could focus my analyses on those variables.  In order to create this subset, I shied away from retaining variables from the orOFiginal data that had numerous NAs, and from retaining the columns that had links for sources.  
+I purposefully included only 10 out of the 27 variables from the original data base to make the data set less overwhelming.  Also, I purposefully did not include variables with hundreds of NA's, which I hope will allow for easier analysis (those variables are difficult to extract much meaning from since there are so many NA's).  Finally, by making a package for the `satellite` data set, a description of the variables is easily accessible and visible through the "Help" tab through running `?satellites`.  While the UCS Satellites Database contains documentation on their data, which can be found [here](https://s3.amazonaws.com/ucs-documents/nuclear-weapons/sat-database/4-11-17-update/User+Guide+1-1-17+wAppendix.pdf), I found it cumbersome to go back and forth between the data and the documentation as I was trying to figure out what each variable represented, so the data set description that is built-in to the package seeks to remove this burden. 
 
-After selecting the variables I wanted to include, I ended up with the data set `satellites`, a dataframe with 2670 observations and 10 variables.  The data set includes the official names of the satellites, as well as categorical variables such as: the country registered as responsible for the satellite; the affiliation of the user of the satellite (e.g., "commercial," "military," etc.); the purpose of the satellite (e.g., "earth observation", "communications," etc.); and the satellite's class of orbit.  The data set also contains four numeric variables pertaining to each satellite's orbit, as well as the each satellite's launch date. To see a data dictionary for the data set, refer to XXX.
+The `satellites` data set has 2670 observations and 10 variables.  Each observation represents a satellite in Earth's orbit, with the name of each satellite given by the `official_name` variable.  Additionally, there are categorical variables for: the country registered as responsible for the satellite; the affiliation of the user of the satellite (e.g., "commercial," "military," etc.); the purpose of the satellite (e.g., "earth observation", "communications," etc.); and the satellite's class of orbit.  The data set also contains four numeric variables pertaining to each satellite's orbit, as well as the each satellite's launch date.
 
-Even though the `satellites` dataset found within this package only incldues 10 out of the 27 variables that the UCS provide in their database, there is still a tremendous amount of analysis that can be performed.  For an example of data exploration and analysis that can be done with this data set, see below. 
+Note that the [Union for Concerned Scientists (UCS)](https://www.ucsusa.org/) first published data on the satellites orbiting Earth in their Satellite Database in 2005, and they have updated the database multiple times since then.  This package features the data from the April 1, 2020 release (which includes satellite launches through March 31, 2020).  
 
 ## Installation
 
-You can install the released version of satellites from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of satellites from [GitHub](https://github.com/) with:
 
 ``` r
-install.packages("satellites")
-```
-
-And the development version from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("nfrontero20/satellites")
+# install.packages("remotes")
+remotes::install_github("nfrontero20/satellites")
 ```
 ## Example of data exploration and data analysis
 
@@ -67,13 +61,8 @@ purposes_tally <- satellites %>%
 # Take the top 5 rows
 purposes_top_5 <- purposes_tally[1:5, ]
 
-# Change column names for printing purposes
-colnames(purposes_top_5) <- c("Purpose", "N")
-
-# Print out the 5 most frequent purposes using kable
-# kable(purposes_top_5, "html", booktabs = TRUE, align = c("l", "l"), escape = FALSE) %>%
-#   kable_styling(latex_options = c("HOLD_position", "striped"), position="center") %>%
-#   add_header_above(c("Five most common purposes for satellites\n currently in orbit" = 2))
+# Print the top 5 purposes
+purposes_top_5
 ```
 
 The five most common purposes for satellites currently in orbit are listed in the table above.  We see that communications and earth observation are the two most frequently cited purposes for the satellites.  
@@ -85,7 +74,7 @@ num_rows_satellites <- nrow(satellites)
 # Proportion of satellites used for the top 5 purposes
 round(sum(purposes_top_5$N)/num_rows_satellites * 100, 2)
 ```
-All together, these five purposes are cited for 96.7% of the satellites currently in orbit.
+Altogether, these five purposes are cited for 96.7% of the satellites currently in orbit.
 
 ### Example 2: Describe the distribution of the satellites that have been launched for the most frequently cited purpose. 
 
@@ -118,7 +107,7 @@ satellites used for communication purposes",
     y = "Eccentricity")
 ```
 
-The relationship between eccentricity and period appears somewhat parabolic.  As period increases from 0 days to about 900 days, eccentricity increases.  However, as period increases from around 900 days onwards to 1500 days, eccentricity decreases.  The relationship between period and eccentricity presents as roughly symmetric about 900 days. 
+The relationship between eccentricity and period appears somewhat parabolic.  As period increases from 0 days to about 900 days, eccentricity increases.  However, as period increases from around 900 days onward to 1500 days, eccentricity decreases.  The relationship between period and eccentricity presents as roughly symmetric about 900 days. 
 
 ### Summary of these analyses
 

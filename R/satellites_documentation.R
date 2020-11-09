@@ -27,4 +27,5 @@ NULL
 #'   \item{period}{Time required to complete one full orbit of Earth (minutes)}
 #'   \item{launch_date}{Date of satellite launch}
 #' }
+#' @source \url{https://www.ucsusa.org/resources/satellite-database}
 "satellites"

@@ -2,6 +2,8 @@
 # satellites
 
 <!-- badges: start -->
+
+![R-CMD-check](https://github.com/nfrontero20/satellites/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
 The `satellites` package was created to provide a simple yet

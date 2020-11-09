@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # satellites
 
 <!-- badges: start -->
+![R-CMD-check](https://github.com/nfrontero20/satellites/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
 The `satellites` package was created to provide a simple yet information-filled research tool for those interested in learning about the satellites in Earth's orbit. The [Union for Concerned Scientists (UCS)](https://www.ucsusa.org/) first published this data set in 2005 and has updated it multiple times since then.  This package features the data from the April 1, 2020 release (which includes launches through March 31, 2020).  The UCS states on a [webpage dedicated to this database](https://www.ucsusa.org/resources/satellite-database) that their intent in producing the database is to "create a research tool for specialists and non-specialists alike by collecting open-source information on operational satellites and presenting it in a format that can be easily manipulated for research and analysis."  It is my belief that the UCS has succeeded in their mission, and through this package I aim to make the data even easier to work with. 

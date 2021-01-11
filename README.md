@@ -13,11 +13,11 @@ The files needed to create the data package are found in three folders, [R](http
   - R: 
     - [satellites_documentation.R](https://github.com/nfrontero20/satellites/blob/master/R/satellites_documentation.R) - contains the text that appears for the package documentation
   - data-raw: 
-    - [UCS-Satellite-Database-Officialname-4-1-2020.xls](https://github.com/nfrontero20/satellites/blob/master/data-raw/UCS-Satellite-Database-Officialname-4-1-2020.xls) - data set from the Union of Concerned Scientists that contains the official names of each satellite
-    - [UCS-Satellite-Database-4-1-2020.xls](https://github.com/nfrontero20/satellites/blob/master/data-raw/UCS-Satellite-Database-4-1-2020.xls) - data set from the Union of Concerned Scientists that contains 
-    - [satellites_wrangle.R](https://github.com/nfrontero20/satellites/blob/master/data-raw/satellites_wrangle.R)
+    - [UCS-Satellite-Database-Officialname-4-1-2020.xls](https://github.com/nfrontero20/satellites/blob/master/data-raw/UCS-Satellite-Database-Officialname-4-1-2020.xls) - data set from the Union of Concerned Scientists with satellites listed by their official name
+    - [UCS-Satellite-Database-4-1-2020.xls](https://github.com/nfrontero20/satellites/blob/master/data-raw/UCS-Satellite-Database-4-1-2020.xls) - - data set from the Union of Concerned Scientists with satellites listed by their most popular names (and for some, an alterate or former name)
+    - [satellites_wrangle.R](https://github.com/nfrontero20/satellites/blob/master/data-raw/satellites_wrangle.R) - data is read in and wrangled, and package is created
   - data
-    - [satellites.rda](https://github.com/nfrontero20/satellites/blob/master/data/satellites.rda)
+    - [satellites.rda](https://github.com/nfrontero20/satellites/blob/master/data/satellites.rda) - the rda that contains the data in the package
 
 
 ## Background

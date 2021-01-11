@@ -6,6 +6,8 @@
 ![R-CMD-check](https://github.com/nfrontero20/satellites/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
+## Background
+
 The `satellites` package was created to provide a simple yet
 information-filled research tool for those interested in learning about
 the satellites in Earth’s orbit. Learning about astronomy and physics
@@ -30,6 +32,8 @@ I found it cumbersome to go back and forth between the data and the
 documentation as I was trying to figure out what each variable
 represented, so the data set description that is built-in to the package
 seeks to remove this burden.
+
+## About the data set
 
 The `satellites` data set has 2670 observations and 10 variables. Each
 observation represents a satellite in Earth’s orbit, with the name of
@@ -72,7 +76,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-### Example 1: What are the top 5 purposes/uses for the satellites?
+**Example 1: What are the top 5 purposes/uses for the satellites?**
 
 ``` r
 # Tally the number of satellites for each purpose

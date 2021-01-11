@@ -118,7 +118,7 @@ round(sum(purposes_top_5$N)/num_rows_satellites * 100, 2)
 Altogether, these five purposes are cited for 96.7% of the satellites
 currently in orbit.
 
-### Example 2: Describe the distribution of the satellites that have been launched for the most frequently cited purpose.
+**Example 2: Describe the distribution of the satellites that have been launched for the most frequently cited purpose.**
 
 ``` r
 # Get the satellites that have been used for communications
@@ -145,7 +145,7 @@ year after year. In the past two years, there has been a drastic
 increase in the number of satellites launched for communications
 purposes.
 
-### Example 3: Among these same satellites, is there an association between eccentricity and period?
+**Example 3: Among these same satellites, is there an association between eccentricity and period?**
 
 ``` r
 # Make a plot of period and eccentricity for the communication satellites

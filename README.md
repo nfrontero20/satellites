@@ -25,7 +25,7 @@ hope will allow for easier analysis (those variables are difficult to
 extract much meaning from since there are so many NA’s). Finally, by
 making a package for the `satellite` data set, a description of the
 variables is easily accessible and visible through the “Help” tab
-through running `?satellites`. While the UCS Satellites Database
+through running `??satellites`. While the UCS Satellites Database
 contains documentation on their data, which can be found
 [here](https://s3.amazonaws.com/ucs-documents/nuclear-weapons/sat-database/4-11-17-update/User+Guide+1-1-17+wAppendix.pdf),
 I found it cumbersome to go back and forth between the data and the

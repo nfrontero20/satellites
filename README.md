@@ -67,7 +67,11 @@ remotes::install_github("nfrontero20/satellites")
 
 The files needed to create the data package are found in three folders, [R](https://github.com/nfrontero20/satellites/tree/master/R), [data-raw](https://github.com/nfrontero20/satellites/tree/master/data-raw), and [data](https://github.com/nfrontero20/satellites/tree/master/data).  These folders contain the following documents: 
 
-  - R
+  - R: [
+    - satellites_documentation.R](https://github.com/nfrontero20/satellites/blob/master/R/satellites_documentation.R)
+    - [UCS-Satellite-Database-4-1-2020.xls](https://github.com/nfrontero20/satellites/blob/master/data-raw/UCS-Satellite-Database-4-1-2020.xls)
+    - [satellites_wrangle.R
+](https://github.com/nfrontero20/satellites/blob/master/data-raw/satellites_wrangle.R)
   - data-raw
   - data
 

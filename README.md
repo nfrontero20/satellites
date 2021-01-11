@@ -63,6 +63,14 @@ You can install the released version of satellites from
 remotes::install_github("nfrontero20/satellites")
 ```
 
+## Navigating the repository
+
+The files needed to create the data package are found in three folders, [R](https://github.com/nfrontero20/satellites/tree/master/R), [data-raw](https://github.com/nfrontero20/satellites/tree/master/data-raw), and [data](https://github.com/nfrontero20/satellites/tree/master/data).  These folders contain the following documents: 
+
+  - R
+  - data-raw
+  - data
+
 ## Example of data exploration and data analysis
 
 Here you will see three questions that can be answered using the

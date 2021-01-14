@@ -1,5 +1,5 @@
 
-# satellites
+# Satellites Orbiting Earth
 
 <!-- badges: start -->
 
